@@ -62,6 +62,7 @@ void setup(void)
 }
 
 
+/*- https://www.tutorialspoint.com/enum-in-c  -*/
 typedef enum
 {
     TRGG_START,
@@ -72,9 +73,9 @@ typedef enum
 int main(void)
 {
     uint32_t mtime_led = 0;
-    uint8_t key_now = 0xFF;
-    uint8_t key_last = 0xFF;
-    uint32_t mtime_key = 0;
+    /*uint8_t key_now = 0xFF;*/
+    /*uint8_t key_last = 0xFF;*/
+    /*uint32_t mtime_key = 0;*/
     uint32_t mtime_ultrasonic = 0;
     uint32_t diff;
     STATE_TypeDef state = TRGG_START;
