@@ -21,7 +21,7 @@
 #define LED_OFF  GPIO_WriteLow(LED_PORT, LED_PIN);
 #define LED_REVERSE GPIO_WriteReverse(LED_PORT, LED_PIN);
 
-#define MASURMENT_PERON 444    // čas měření
+#define MASURMENT_PERON 444    // maximální celkový čas měření (ms)
 
 
 /*----------------------------------------------------------------------------------------------*/
@@ -65,9 +65,9 @@ void setup(void)
 /*- https://www.tutorialspoint.com/enum-in-c  -*/
 typedef enum
 {
-    TRGG_START,
-    TRGG_WAIT,
-    MEASURMENT_WAIT
+    TRGG_START,       // zahájení trigger impoulzu
+    TRGG_WAIT,        // čekání na konec trrigger impoulzu
+    MEASURMENT_WAIT   // čkání na dokončení měření
 } STATE_TypeDef;
 
 int main(void)
